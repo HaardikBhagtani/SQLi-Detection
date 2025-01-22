@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import sys
 
 def analyze_csv(file_path):
     # Load the CSV file
@@ -41,5 +42,15 @@ def extract_uri(info):
     # Extract URI from the Info column (Assuming it's in the format "GET /path?query HTTP/1.1")
     match = re.search(r"(?:GET|POST)\s+(.*?)\s+HTTP/", str(info))
     return match.group(1) if match else "NULL"
-    
-analyze_csv('test/file1.csv')
+
+
+def main():
+    if len(sys.argv) < 2:
+            print("Usage: python main.py <CSV File>")
+            sys.exit(1)  
+
+    analyze_csv(sys.argv[1])
+
+
+if __name__ == "__main__":
+    main()
