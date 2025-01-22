@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project aims to detect SQL injection vulnerabilities in web applications.  The core functionality is implemented in `main.py`.  The `test/` directory contains unit tests for the project.
+This project aims to detect SQL injection attempts in captured packets by SIEM tools.  The core functionality is implemented in `main.py`.  The `test/` directory contains unit tests for the project.
 
 ## Features
 
